@@ -69,7 +69,7 @@ const download = async () => {
 
 // Execute a cron job every 5 Minutes = */5 * * * *
 
-var j = schedule.scheduleJob("/30 * * * * *", function() {
+var j = schedule.scheduleJob("/30 * * * * *", function () {
   console.log("Time to upload!");
   upload();
 });

@@ -2,6 +2,7 @@ const web3 = require("./ethereum/web3");
 const ipfs = require("./ipfs");
 const fs = require("fs-extra");
 const iotContract = require("./ethereum/iot-contract");
+
 const upload = async () => {
   //Script to run
 
@@ -35,6 +36,7 @@ const upload = async () => {
   //Exit the script with status 0 which means no error occured
   process.exit(0);
 };
+
 const download = async () => {
   console.log("Calling smart contract to get array data count...");
   const count = await iotContract.methods.getIotDataArrayLength().call();
@@ -61,7 +63,7 @@ const download = async () => {
 };
 
 //Remove comment below to upload
-// upload();
+upload();
 
 //Remove comment below to download
-download();
+// download();
